@@ -1,37 +1,88 @@
-# Front-end Style Guide
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
-## Layout
+body{
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
 
-The designs were created to the following widths:
+* {
+  box-sizing: border-box;
+}
 
-- Mobile: 375px
-- Desktop: 1440px
+header{
+  margin: 50px auto;
+  max-width: 500px;
+  text-align: center;
+}
 
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+h1{
+  font-weight: 200;
+  margin: 0;
+}
 
-## Colors
+h1:nth-child(2) {
+  font-weight: 600;
+}
 
-### Primary
+p{
+  color: hsl(229, 6%, 66%);
+}
 
-- Soft red: hsl(10, 79%, 65%)
-- Cyan: hsl(186, 34%, 60%)
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1140px;
+  justify-content: center;
+}
 
-### Neutral
+.box{
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 5px;
+  padding: 30px;
+  margin:15px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
 
-- Dark brown: hsl(25, 47%, 15%)
-- Medium brown: hsl(28, 10%, 53%)
-- Cream: hsl(27, 66%, 92%)
-- Very pale orange: hsl(33, 100%, 98%)
+.box h3{
+  margin: 0;
+  font-size: 22px;
+}
 
-## Typography
+.box p{
+  font-size: 14px;
+  margin: 15px 0 30px;
+}
 
-### Body Copy
+.box img{
+  align-self: flex-end;
+}
 
-- Font size: 18px
+.box:nth-child(1){
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
 
-### Font
+.box:nth-child(2){
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
 
-- Family: [DM Sans](https://fonts.google.com/specimen/DM+Sans)
-- Weights: 400, 700
+.box:nth-child(3){
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
 
-> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
+.box:nth-child(4){
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.box:nth-child(odd){
+  transform: translateY(50%);
+}
+
+@media (max-width: 775px) {
+  .box:nth-child(odd){
+    transform: translateY(0);
+  }
+}
